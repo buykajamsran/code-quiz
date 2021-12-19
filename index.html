@@ -8,8 +8,30 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
+<header>
+    <div>
+        <button class="scores-btn" id="view-high-scores">View high scores</button>
+    </div>
+    <div>
+        <p>Time: <span id="timerCountdown">0</span></p>
+    </div>
+</header>
+
 <body>
 
+    <section class="page-content" id="page-content">
+
+        <div id="quiz">
+            <h1 class="page-title">Coding Quiz Challenge</h1>
+            <p>
+                Try to answer the following code-related questions within the time limit. 
+                Keep in mind that incorrect answers will penalize your score/time 
+                by ten seconds!
+            </p>
+            <button class="start-btn" id="timeStart">Start Quiz</button>
+        </div>
+
+    </section>
     <script src="./assets/js/script.js"></script>
 </body>
 
