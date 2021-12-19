@@ -8,28 +8,42 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
-<header>
-    <div id="header">
-        <a id="highscore" href="viewhighscores.html">View high scores</a>
-        <p id="timer">time: 0</p>
-    </div>
-</header>
-
 <body>
 
-    <section class="page-content" id="page-content">
+    <header>
+        <div id="header">
+            <a id="highscore" href="viewhighscores.html">View high scores</a>
+            <p id="timer">Time: 0</p>
+        </div>
+    </header>
 
-        <div id="quiz">
+    <main class="container">
+
+        <div class= "row" id="intro">
             <h1 class="page-title">Coding Quiz Challenge</h1>
-            <p id="instructions">
-                Try to answer the following code-related questions within the time limit. 
-                Keep in mind that incorrect answers will penalize your score/time 
-                by ten seconds!
-            </p>
+            <div id="instructions">
+                <p>Try to answer the following code-related questions within the time limit.</p>  
+                <p>Keep in mind that incorrect answers will penalize your score/time</p> 
+                <p>by ten seconds!</p>
+            </div>
             <button class="start-btn" id="timeStart" type="submit">Start Quiz</button>
         </div>
 
-    </section>
+        <div id="quiz">
+            <div id="questions">
+                <div id="choices">
+                    <ul>
+                        <li><button type="button" class="choice-option-1" id="1" onclick="checkAnswer('1')"></button></li>
+                        <li><button type="button" class="choice-option-2" id="2" onclick="checkAnswer('2')"></button></li>
+                        <li><button type="button" class="choice-option-3" id="3" onclick="checkAnswer('3')"></button></li>
+                        <li><button type="button" class="choice-option-4" id="4" onclick="checkAnswer('4')"></button></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="answers"></div>
+        </div>
+
+    </main>
     <script src="./assets/js/script.js"></script>
 </body>
 
