@@ -117,3 +117,13 @@ function checkAnswer(answer) {
         runningQuestionIndex++;
         renderQuestion();
     };   
+
+function resultRender() {
+    quiz.style.display = "none";
+    intro.style.display = "none";
+    finalScore.style.display = "block";
+     
+    if (timeLeft === 0 || questions.length -1) { 
+     result.textContent = "Your final score is " + timeLeft + ".";
+    }
+};
