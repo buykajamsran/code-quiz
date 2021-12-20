@@ -56,3 +56,11 @@ var questions = [
 intro.style.display = "block";
 quiz.style.display = "none";
 finalScore.style.display = "none";
+
+var timeStart = document.getElementById("timeStart");
+
+timeStart.addEventListener("click", startQuiz);
+
+var timeLeft = 75;
+var startScore = 0;
+var timer = document.getElementById("timer");
