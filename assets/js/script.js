@@ -53,3 +53,6 @@ var questions = [
     },
 ]  
 
+intro.style.display = "block";
+quiz.style.display = "none";
+finalScore.style.display = "none";
