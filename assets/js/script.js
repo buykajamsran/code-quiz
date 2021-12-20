@@ -100,3 +100,20 @@ function renderQuestion() {
     choice3.innerHTML = q.choice3;
     choice4.innerHTML = q.choice4;
 };
+
+function checkAnswer(answer) {
+    if(questions[runningQuestionIndex].correct == answer) {
+        answers.textContent = "Correct!"
+    }
+    else {
+       answers.textContent = "Wrong!"
+       timeLeft -=10;
+    }
+
+    if (questions.length === runningQuestionIndex+1) {
+        resultRender();
+        return;
+    }
+        runningQuestionIndex++;
+        renderQuestion();
+    };   
