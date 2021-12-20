@@ -97,3 +97,36 @@ ul {
     color: gray;
     font-size: larger;
 }
+
+#endMessage {
+    margin-top: 15%;
+    font-weight: bold;
+    font-size: x-large;
+    padding-bottom: 10px;
+    margin-left: 40%;
+}
+
+#result {
+    margin-left: 40%;
+    padding-bottom: 3px;
+    padding-bottom: 10px;
+}
+
+#name {
+    margin-left: 40%;
+    padding-top: 10px;
+}
+
+#userInfo {
+    background-color: var(--primary-color);
+    width: 80px;
+    height: 20px;
+    border: none;
+    border-radius: 5px;
+    color: var(--tertiary-color);
+    font-size: 16px;
+    outline: none;
+}
+
+#userInfo:hover {
+    background-color: var(--secondary-color);
