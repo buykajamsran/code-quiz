@@ -1,7 +1,12 @@
 # Code-Quiz
 
-This timed code quiz features multiple-choice questions about javascript. If answered incorrectly, time is deducted. At the end, it will ask for credentials to log and rank your score. 
+## Description:
 
-Deployed app: https://buykajamsran.github.io/code-quiz/
+### This timed code quiz features multiple-choice questions about javascript. If answered incorrectly, time is deducted. At the end of the quiz, it will ask for initials to log and rank your score. 
 
-Technologies used are: HTML, CSS, Javascript
+### Deployed app: https://buykajamsran.github.io/code-quiz/
+
+## Built using:
+
+### HTML, CSS, Javascript
+
