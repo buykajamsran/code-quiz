@@ -13,14 +13,14 @@
     <header>
         <div id="header">
             <a id="highscore" href="viewhighscores.html">View high scores</a>
-            <p id="timer">Time: 0</p>
+            <p id="timer"></p>
         </div>
     </header>
 
     <main class="container">
 
         <div class= "row" id="intro">
-            <h1 class="page-title">Coding Quiz Challenge</h1>
+            <h1 class="start">Coding Quiz Challenge</h1>
             <div id="instructions">
                 <p>Try to answer the following code-related questions within the time limit.</p>  
                 <p>Keep in mind that incorrect answers will penalize your score/time</p> 
@@ -30,17 +30,29 @@
         </div>
 
         <div id="quiz">
-            <div id="questions">
+            <div id="question"></div>
                 <div id="choices">
                     <ul>
-                        <li><button type="button" class="choice-option-1" id="1" onclick="checkAnswer('1')"></button></li>
-                        <li><button type="button" class="choice-option-2" id="2" onclick="checkAnswer('2')"></button></li>
-                        <li><button type="button" class="choice-option-3" id="3" onclick="checkAnswer('3')"></button></li>
-                        <li><button type="button" class="choice-option-4" id="4" onclick="checkAnswer('4')"></button></li>
+                        <li><button type="button" class="choice option-1 choice-button" id="1" onclick="checkAnswer('1')"></button></li>
+                        <li><button type="button" class="choice option-2 choice-button" id="2" onclick="checkAnswer('2')"></button></li>
+                        <li><button type="button" class="choice option-3 choice-button" id="3" onclick="checkAnswer('3')"></button></li>
+                        <li><button type="button" class="choice option-4 choice-button" id="4" onclick="checkAnswer('4')"></button></li>
                     </ul>
                 </div>
-            </div>
             <div id="answers"></div>
+        </div>
+
+        <div id="finalScore">
+            <h2 id="endMessage">All done!</h2>
+            <div id="result"></div>
+             
+             <form >
+                <div id="initials">
+                    <label for="users" id="name">Enter Initials:</label>
+                    <input type="text" id="contactInfo">
+                    <input type="button" id= "userInfo" class="submitBtn" onclick="location.href='viewhighscores.html';" value="Submit" />
+                </div>
+            </form>
         </div>
 
     </main>
