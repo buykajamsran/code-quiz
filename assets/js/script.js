@@ -1,3 +1,4 @@
+// Varaible declarations //
 var header = document.getElementById("header");
 var intro = document.getElementById("intro");
 var quiz = document.getElementById("quiz");
@@ -15,6 +16,7 @@ var endMessage = document.getElementById("endMessage");
 var result = document.getElementById("result");
 var scoreList = document.getElementById("scorelist");
 
+// Array of questions with answers //
 var questions = [
     { question: 'Commonly used data types DO NOT include:', 
     choice1 : "1. strings",
@@ -57,16 +59,19 @@ intro.style.display = "block";
 quiz.style.display = "none";
 finalScore.style.display = "none";
 
+// Start quiz button variable //
 var timeStart = document.getElementById("timeStart");
 
 timeStart.addEventListener("click", startQuiz);
 
+// Timer variable //
 var timeLeft = 75;
 var startScore = 0;
 var timer = document.getElementById("timer");
 
 timer.textContent = "Time: " + startScore + "s";
 
+// Quiz start funtion //
 function startQuiz() {
     quiz.style.display = "block";
     question.style.display ="block";
@@ -89,6 +94,7 @@ function startQuiz() {
     renderQuestion();
 };
 
+// Questions displayed //
 var lastQuestionIndex = questions.length -1;
 var runningQuestionIndex = 0;    
 
@@ -101,6 +107,7 @@ function renderQuestion() {
     choice4.innerHTML = q.choice4;
 };
 
+// Checks answers //
 function checkAnswer(answer) {
     if(questions[runningQuestionIndex].correct == answer) {
         answers.textContent = "Correct!"
@@ -118,6 +125,7 @@ function checkAnswer(answer) {
         renderQuestion();
     };   
 
+// Score results //
 function resultRender() {
     quiz.style.display = "none";
     intro.style.display = "none";
@@ -128,6 +136,7 @@ function resultRender() {
     }
 };
 
+// Logs initials //
 userInfo.addEventListener("click", function() {
     var contactInfo = document.getElementById("contactInfo").value;
 
