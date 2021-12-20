@@ -9,16 +9,16 @@
 </head>
 
 <body>
-
+    <!-- Header section -->
     <header>
         <div id="header">
             <a id="highscore" href="viewhighscores.html">View high scores</a>
             <p id="timer"></p>
         </div>
     </header>
-
+    <!-- Body section -->
     <main class="container">
-
+        <!-- Quiz intro section -->
         <div class= "row" id="intro">
             <h1 class="start">Coding Quiz Challenge</h1>
             <div id="instructions">
@@ -28,7 +28,7 @@
             </div>
             <button class="start-btn" id="timeStart" type="submit">Start Quiz</button>
         </div>
-
+        <!-- Quiz section -->
         <div id="quiz">
             <div id="question"></div>
                 <div id="choices">
@@ -39,9 +39,10 @@
                         <li><button type="button" class="choice option-4 choice-button" id="4" onclick="checkAnswer('4')"></button></li>
                     </ul>
                 </div>
+            <!-- Answers section -->
             <div id="answers"></div>
         </div>
-
+        <!-- High scores log section -->
         <div id="finalScore">
             <h2 id="endMessage">All done!</h2>
             <div id="result"></div>
