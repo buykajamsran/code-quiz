@@ -64,3 +64,39 @@ timeStart.addEventListener("click", startQuiz);
 var timeLeft = 75;
 var startScore = 0;
 var timer = document.getElementById("timer");
+
+timer.textContent = "Time: " + startScore + "s";
+
+function startQuiz() {
+    quiz.style.display = "block";
+    question.style.display ="block";
+    header.style.display = "block";
+    intro.style.display = "none";
+    finalScore.style.display = "none";
+
+
+    var timeInterval = setInterval(function() {
+        timer.textContent = "Time:" + timeLeft + "s";
+        timeLeft-=1;
+
+        if(timeLeft === 0 || questions.length === runningQuestionIndex+1)  {
+            resultRender();
+            clearInterval(timeInterval);
+            timer.textContent = "Time:" + timeLeft + "s";
+         }
+    }, 1000);
+
+    renderQuestion();
+};
+
+var lastQuestionIndex = questions.length -1;
+var runningQuestionIndex = 0;    
+
+function renderQuestion() {
+    var q = questions[runningQuestionIndex];
+    question.innerHTML = q.question;
+    choice1.innerHTML = q.choice1;
+    choice2.innerHTML = q.choice2;
+    choice3.innerHTML = q.choice3;
+    choice4.innerHTML = q.choice4;
+};
