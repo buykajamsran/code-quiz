@@ -127,3 +127,12 @@ function resultRender() {
      result.textContent = "Your final score is " + timeLeft + ".";
     }
 };
+
+userInfo.addEventListener("click", function() {
+    var contactInfo = document.getElementById("contactInfo").value;
+
+    localStorage.setItem("contactInfo", JSON.stringify (contactInfo));
+    localStorage.setItem("timeLeft", JSON.stringify(timeLeft));
+    
+    loadScores();
+    });
